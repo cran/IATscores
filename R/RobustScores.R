@@ -6,7 +6,8 @@ RobustScores <- function(IATdata,
                          P3 = c("dscore", "gscore", "wpr90", "minid",
                                 "minid_t10", "minid_w10", "minid_i10"),
                          P4 = c("nodist", "dist"),
-                         maxMemory = 1000, verbose = TRUE)
+                         maxMemory = 1000, verbose = TRUE,
+                         autoremove = TRUE)
 {
    
   mincor <- 3 # minimum number of correct responses with lat < k10
@@ -82,14 +83,14 @@ RobustScores <- function(IATdata,
                           latency >= lofxtrim)) %>%
     filter(ncor < mincor)
   
-  if(nrow(ncor) != 0)
+  if(autoremove & nrow(ncor) != 0)
   {
     IATdata <- filter(IATdata, !subject %in% ncor$subject)
     warning(paste("The following subjects have been removed because they
             have too few correct responses to compute IAT scores, i.e.,
             less than", mincor, "correct responses with latency less than",
                   k10, "ms and more than", lofxtrim, "ms in at least one block:
-                  Subjects =", str_join(ncor$subject, collapse = ", ")),
+                  Subjects =", str_c(ncor$subject, collapse = ", ")),
             immediate. = TRUE)
   }
   
@@ -100,3 +101,49 @@ RobustScores <- function(IATdata,
   if(verbose) print(paste0(Sys.time(), ": IAT scores have been computed"))
   Scores
 }
+
+
+
+# D2 scores
+D2 <- function(IATdata,...) RobustScores(IATdata,
+             P1 = "fxtrim",
+             P2 = "ignore",
+             P3 = "dscore",
+             P4 = "dist", ...)
+
+# D5 scores
+D5 <- function(IATdata,...) RobustScores(IATdata,
+                                         P1 = "fxtrim",
+                                         P2 = "recode",
+                                         P3 = "dscore",
+                                         P4 = "dist", ...)
+
+# D6 scores
+D6 <- function(IATdata,...) RobustScores(IATdata,
+                                         P1 = "fxtrim",
+                                         P2 = "recode600",
+                                         P3 = "dscore",
+                                         P4 = "dist", ...)
+
+
+# D2SWND scores
+D2SWND <- function(IATdata,...) RobustScores(IATdata,
+                                         P1 = "wins10",
+                                         P2 = "ignore",
+                                         P3 = "dscore",
+                                         P4 = "nodist", ...)
+
+# D5SWND scores
+D5SWND <- function(IATdata,...) RobustScores(IATdata,
+                                         P1 = "wins10",
+                                         P2 = "recode",
+                                         P3 = "dscore",
+                                         P4 = "nodist", ...)
+
+# D6SWND scores
+D6SWND <- function(IATdata,...) RobustScores(IATdata,
+                                         P1 = "wins10",
+                                         P2 = "recode600",
+                                         P3 = "dscore",
+                                         P4 = "nodist", ...)
+
