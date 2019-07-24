@@ -1,6 +1,5 @@
 \name{alg2param}
 \alias{alg2param}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Convert the algorithm names to the generating parameters
 }
@@ -10,7 +9,6 @@ Starting from the algorithm names, gives the parameters that generated each algo
 \usage{
 alg2param(x)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{The name of an algorithm (string) or the name of many algorithms (vector of strings).
 }
@@ -32,7 +30,4 @@ Giulio Costantini}
 \examples{
 alg2param("p1231")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
