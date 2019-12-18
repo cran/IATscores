@@ -1,6 +1,6 @@
-cfc01c306239e1e62dd93b7202419c3c *DESCRIPTION
+c14c430889521ec144f35638a9a8fd60 *DESCRIPTION
 caca689c1bff5a739cf804fb49298b47 *NAMESPACE
-e73d31cc3ac3821969093bd08e7dcb26 *NEWS.md
+815abbea152c39ee4819b3d19b6b9342 *NEWS.md
 ed8e39b12b4e9d1224249e5b8fe169cf *R/Dscores.R
 cac8d688d716fbf70c081758c27d76b7 *R/Gscores.R
 5c5bf67436acc8571878449ef291e62e *R/IATdescriptives.R
@@ -9,7 +9,7 @@ a5548d42f9e6ce9757ea0c83eaa21281 *R/Pretreatment.R
 ca80ab3bcccd18833c8bf963e284e74f *R/RobustScores.R
 4dbd807b1e456de5c3b59c87897cf686 *R/SplitHalf.R
 83cfb32d23e75f9dcad54238c629bc3a *R/TestRetest.R
-4a052c76c5573898bb946b2cfcc27f86 *R/Tghraph.R
+4fba69a7cd77ac2aedb3b816ffa33ff1 *R/Tghraph.R
 a9b00d180b3091cec5e1b70eb964a661 *R/WPRscores.R
 cc70bed164fcf24f17cda7a291d30b06 *R/alg2param.R
 54ef59204690efa724ad973ec2df4f0f *R/doP1P2.R
@@ -21,7 +21,7 @@ e225a6abd3fb752de2cb697d518149f9 *R/fxwins.R
 f59bc893f9a8c385f75301d5322dc073 *R/inv_trimval.R
 6307dc83b257c1e155062a20883444a4 *R/specialmean.R
 62af1c9a3f606a4fafe3b540cb72e962 *R/specialvar.R
-69bd9c348c961e93824e5db6f6063baa *R/transitive.reduction.R
+b65dc278017eed272e74324ac3efb3ea *R/transitive.reduction.R
 21eb0214514c92af78ea426533d8ced8 *R/trim_or_win.R
 b3506d4e55b175f9fd982dc6dc2f789d *R/trimval.R
 ea8798350239aa7ab9caf3841b7c146f *R/utils.R
